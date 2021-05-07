@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/eddit_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:textSize="70sp"
+        android:gravity="center|end"
+        android:inputType="number"
+        android:text="0"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <Button
+
+                android:onClick="AcCleaner"
+                android:id="@+id/ac_btn"
+                style="@style/gray_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AC" />
+
+            <Button
+
+                android:id="@+id/pm_btn"
+                style="@style/gray_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="SingOperator"
+                android:text="+/-" />
+
+            <Button
+
+                android:onClick="operate"
+                android:id="@+id/mod_btn"
+                style="@style/gray_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                app:rippleColor="#FFFFFF" />
+
+            <Button
+
+                android:id="@+id/divide_btn"
+                style="@style/orange_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="operate"
+                android:text="/" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <Button
+
+                android:id="@+id/seven_btn"
+                style="@style/defult_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7" />
+
+            <Button
+
+                android:id="@+id/eight_btn"
+                style="@style/defult_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8" />
+
+            <Button
+
+                android:id="@+id/nine_btn"
+                style="@style/defult_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9" />
+
+            <Button
+
+                android:id="@+id/multy_btn"
+                style="@style/orange_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="operate"
+                android:text="X" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <Button
+
+                android:id="@+id/four_btn"
+                style="@style/defult_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4" />
+
+            <Button
+
+                android:id="@+id/five_btn"
+                style="@style/defult_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
+
+            <Button
+
+                android:id="@+id/six_btn"
+                style="@style/defult_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6" />
+
+            <Button
+
+                android:id="@+id/minus_btn"
+                style="@style/orange_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="operate"
+                android:text="-" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <Button
+
+                android:id="@+id/one_btn"
+                style="@style/defult_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
+
+            <Button
+
+                android:id="@+id/two_btn"
+                style="@style/defult_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2" />
+
+            <Button
+
+                android:id="@+id/three_btn"
+                style="@style/defult_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
+
+            <Button
+
+                android:id="@+id/plus_btn"
+                style="@style/orange_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="operate"
+                android:text="+" />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+
+            android:id="@+id/zero_btn"
+            style="@style/ziro_btn"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <Button
+
+            android:id="@+id/dat_btn"
+            style="@style/defult_btn"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="." />
+
+        <Button
+
+            android:id="@+id/equal_btn"
+            style="@style/orange_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="equalClicked"
+            android:text="=" />
+    </LinearLayout>
+
+</LinearLayout>
